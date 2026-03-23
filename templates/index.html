@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Мой первый сайт с мозгами</h1>
-    <p>Сегодня научимся отправлять данные на сервер и получать ответ</p>
+    <h1>My first AI site</h1>
+    <p>Form</p>
     <form method="post">
-        <label for="message">Напиши, как ты себя чувствуешь</label><br>
-        <textarea name="message" id="message" rows="4" cols="50" placeholder="Например: Всё отлично!"></textarea><br>
-        <button type="submit">Отправить</button>
+        <label for="message">Write your feelings</label><br>
+        <textarea name="message" id="message" rows="4" cols="50" placeholder="e.g: I'm fine!"></textarea><br>
+        <button type="submit">Submit</button>
     </form>
     
     {% if recommendation %}
 
     <div class="result">
-        <h3>Рекомендация:</h3>
+        <h3>Recommendation:</h3>
         <p>{{ recommendation }}</p>
     </div>
 
