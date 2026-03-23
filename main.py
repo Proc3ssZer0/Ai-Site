@@ -19,7 +19,7 @@ def extract_film_title(generated_text: str) -> str:
 
 
 def generate_recomendation(mood):
-    prompt = (f"Посоветуй 1 популярную книгу для человека, у которого {mood} настроение. Напиши только название книги ничего больше.")
+    prompt = (f"Посоветуй 1 популярный фильм для человека, у которого {mood} настроение. Напиши только название фильма на английском ничего больше.")
     inputs = tokenizer(prompt, return_tensors="pt")
     outputs = model.generate(
         **inputs,
@@ -49,7 +49,7 @@ def index():
         else:
             mood = "нейтральное"
         ai_text = extract_film_title(generate_recomendation(mood))
-        recommendation = f"Настроение: {mood}. Рекомендация: {ai_text}."
+        recommendation = f"Mood: {mood}. Recommendation: {ai_text}."
 
     return render_template("index.html", recommendation=recommendation, user_text=user_text)
 
