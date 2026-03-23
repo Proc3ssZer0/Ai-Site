@@ -19,7 +19,7 @@ A local web application built with Flask that uses a neural network to analyze y
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/Ai-Site.git
+   git clone https://github.com/Proc3ssZer0/Ai-Site.git
    cd Ai-Site
 
 1. Create a virtual environment (recommended):
