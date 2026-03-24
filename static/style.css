@@ -107,3 +107,16 @@ blockquote:hover {
         padding: 10px 20px;
     }
 }
+
+.lang-switch {
+    text-decoration: none;
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.lang-switch:hover {
+    background: #cbd5e0;
+    transform: scale(1.05);
+}
