@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ texts.title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>My first AI site</h1>
-    <form method="post">
-        <label for="message">Write your feelings</label><br>
-        <textarea name="message" id="message" rows="4" cols="50" placeholder="e.g: I'm fine!"></textarea><br>
-        <button type="submit">Submit</button>
-    </form>
-    
-    {% if recommendation %}
+    <div class="container">
+        <h1>{{ texts.title }}</h1>
 
-    <div class="result">
-        <h3>Recommendation:</h3>
-        <p>{{ recommendation }}</p>
+        <!-- Переключатель языка -->
+        <div style="text-align: right; margin-bottom: 20px;">
+            <a href="?lang={{ texts.lang_target }}" style="text-decoration: none; background: #ddd; padding: 5px 10px; border-radius: 5px;">
+                {{ texts.lang_switch }}
+            </a>
+        </div>
+
+        <form method="post">
+            <label for="message">{{ texts.label }}</label><br>
+            <textarea name="message" id="message" rows="4" cols="50"
+                      placeholder="{{ texts.placeholder }}">{{ user_text }}</textarea><br>
+            <button type="submit">{{ texts.submit }}</button>
+        </form>
+
+        {% if recommendation %}
+        <div class="result">
+            <h3>{{ texts.result_title }}</h3>
+            <p>{{ recommendation }}</p>
+        </div>
+        {% endif %}
     </div>
-
-    {% endif %}
-    
 </body>
 </html>
