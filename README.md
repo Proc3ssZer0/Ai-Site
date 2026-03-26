@@ -38,7 +38,7 @@ Start the Flask server with:
 python main.py
 
 You will see output like:
- * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000 and your LAN ip
 
 Open that address in your browser.
 
