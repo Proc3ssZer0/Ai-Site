@@ -47,8 +47,6 @@ Open that address in your browser.
 
 · The first launch may take extra time to download the model.
 · For faster inference, use a GPU with CUDA support (if available).
-· The default movie database contains about 500 entries. You can extend it by adding your own JSON or CSV files.
-
 📄 License
 
 This project is licensed under the GNU General Public License v3.0 – see the LICENSE file for details.
